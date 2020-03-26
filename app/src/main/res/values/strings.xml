@@ -1,13 +1,50 @@
 <resources>
     <string name="app_name">TourGuideApp</string>
 
+    <!-- Tabs Categories-->
     <string name="park_category">Parks</string>
     <string name="museum_category">Museums</string>
     <string name="resturant_category">FastFood</string>
     <string name="sports_category">Sports</string>
+
+    <!-- Random String -->
     <string name="cheese_ipsum">Jarlsberg lancashire edam. Dolcelatte hard cheese brie st. agur blue
     cheese caerphilly bavarian bergkase cheese and biscuits mascarpone. Cheeseburger swiss bavarian
     bergkase cream cheese fromage frais cheesy feet port-salut airedale. St. agur blue cheese rubber
     cheese caerphilly cheddar cheesecake cream cheese manchego lancashire. Roquefort squirty cheese
     the big cheese.</string>
+
+    <!-- Used for testing-->
+    <string name="textString">test</string>
+
+    <!--Sports Tour Attractions -->
+    <string name="mosaic">Mosaic Stadium</string>
+    <string name="golf">Regina Golf Park</string>
+
+    <!--Park Tour attractions -->
+    <string name="norseman_park">Norseman Park</string>
+    <string name="kiwanis_waterfall">Kiwanis Waterfall Park</string>
+    <string name="victoria_park">Victoria Park, Regina</string>
+    <string name="wascana_centre">Wascana Centre</string>
+
+    <!--Museums Tour attractions -->
+    <string name="saskatchewan_museum">Royal Saskatchewan Museum</string>
+    <string name="rcmp">RCMP Heritage</string>
+    <string name="government_house">Government House</string>
+    <string name="plains_museums">Regina Plains Museums</string>
+
+    <!--Resturants Tour attractions -->
+    <string name="viet_thai">Viet Thai</string>
+    <string name="mcdonalds">Mcdonalds</string>
+    <string name="kfc">KFC</string>
+    <string name="poppeys">Poppeys</string>
+
+    <!-- PUT Intent variable(s)-->
+    <string name="TourLocationName">TourLocationName</string>
+    <string name="TourLocationImage">TourLocationImage</string>
+
+    <!-- SnackBar strings-->
+    <string name="Added_confirmation">Added to Favourtes</string>
+    <string name="Action">Action</string>
+
 </resources>

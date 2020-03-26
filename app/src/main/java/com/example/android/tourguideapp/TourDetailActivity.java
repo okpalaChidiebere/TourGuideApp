@@ -46,15 +46,13 @@ public class TourDetailActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Added to Favourtes", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Snackbar.make(view, getString(R.string.Added_confirmation), Snackbar.LENGTH_LONG)
+                        .setAction(getString(R.string.Action), null).show();
             }
         });
 
         //Intent intent = getIntent();
-        final String tourName = getIntent().getStringExtra("TourLocationName");
-
-        Log.v("TourName/detail: ", tourName);
+        final String tourName = getIntent().getStringExtra(getString(R.string.TourLocationName));
 
         /*CollapsingToolbarLayout collapsingToolbar = findViewById(R.id.collapsing_toolbar);
         collapsingToolbar.setTitle(tourName);*/
@@ -73,7 +71,7 @@ public class TourDetailActivity extends AppCompatActivity {
     private void loadBackdrop() {
         final ImageView imageView = findViewById(R.id.backdrop);
 
-        Glide.with(this).load(getIntent().getIntExtra("TourLocationImage", 0)).apply(RequestOptions.centerCropTransform()).into(imageView);
+        Glide.with(this).load(getIntent().getIntExtra(getString(R.string.TourLocationImage), 0)).apply(RequestOptions.centerCropTransform()).into(imageView);
     }
 
 }

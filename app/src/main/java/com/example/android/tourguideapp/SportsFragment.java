@@ -21,8 +21,8 @@ public class SportsFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_tour_list, container,false);
 
         final ArrayList<TourLocation> locations = new ArrayList<TourLocation>();
-        locations.add(new TourLocation("Mosaic Stadium", R.drawable.cheese_4));
-        locations.add(new TourLocation("Regina Golf Park", R.drawable.cheese_2));
+        locations.add(new TourLocation(getString(R.string.mosaic), R.drawable.cheese_4));
+        locations.add(new TourLocation(getString(R.string.golf), R.drawable.cheese_2));
 
         TourLocationAdapter adapter = new TourLocationAdapter(getActivity(), locations);
         GridView gridView = (GridView) rootView.findViewById(R.id.list);
@@ -34,10 +34,10 @@ public class SportsFragment extends Fragment {
 
                 TourLocation loc = locations.get(position);
 
-                Intent ResturantIntent = new Intent(getActivity(), TourDetailActivity.class);
-                ResturantIntent.putExtra("TourLocationName", loc.getName());
-                ResturantIntent.putExtra("TourLocationImage", loc.getThumbnailResourceID());
-                startActivity(ResturantIntent);
+                Intent SportsIntent = new Intent(getActivity(), TourDetailActivity.class);
+                SportsIntent.putExtra(getString(R.string.TourLocationName), loc.getName());
+                SportsIntent.putExtra(getString(R.string.TourLocationImage), loc.getThumbnailResourceID());
+                startActivity(SportsIntent);
 
             }
         });

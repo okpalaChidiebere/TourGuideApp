@@ -22,10 +22,10 @@ public class MuseumFragment extends Fragment {
 
         //regina museums
         final ArrayList<TourLocation> locations = new ArrayList<TourLocation>();
-        locations.add(new TourLocation("Royal Saskatchewan Museum", R.drawable.cheese_5));
-        locations.add(new TourLocation("RCMP Heritage", R.drawable.cheese_4));
-        locations.add(new TourLocation("Government House", R.drawable.cheese_3));
-        locations.add(new TourLocation("Regina Plains Museums", R.drawable.cheese_2));
+        locations.add(new TourLocation(getString(R.string.saskatchewan_museum), R.drawable.cheese_5));
+        locations.add(new TourLocation(getString(R.string.rcmp), R.drawable.cheese_4));
+        locations.add(new TourLocation(getString(R.string.government_house), R.drawable.cheese_3));
+        locations.add(new TourLocation(getString(R.string.plains_museums), R.drawable.cheese_2));
 
         TourLocationAdapter adapter = new TourLocationAdapter(getActivity(), locations);
         /*ListView listView = (ListView) rootView.findViewById(R.id.list);
@@ -39,10 +39,10 @@ public class MuseumFragment extends Fragment {
 
                 TourLocation loc = locations.get(position);
 
-                Intent ResturantIntent = new Intent(getActivity(), TourDetailActivity.class);
-                ResturantIntent.putExtra("TourLocationName", loc.getName());
-                ResturantIntent.putExtra("TourLocationImage", loc.getThumbnailResourceID());
-                startActivity(ResturantIntent);
+                Intent MuseumIntent = new Intent(getActivity(), TourDetailActivity.class);
+                MuseumIntent.putExtra(getString(R.string.TourLocationName), loc.getName());
+                MuseumIntent.putExtra(getString(R.string.TourLocationImage), loc.getThumbnailResourceID());
+                startActivity(MuseumIntent);
 
             }
         });

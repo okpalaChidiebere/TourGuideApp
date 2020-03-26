@@ -24,10 +24,10 @@ public class ResturantFragmet extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_tour_list, container, false);
 
         final ArrayList<TourLocation> locations = new ArrayList<TourLocation>();
-        locations.add(new TourLocation("Viet Thai", R.drawable.cheese_1));
-        locations.add(new TourLocation("Mcdonalds", R.drawable.cheese_2));
-        locations.add(new TourLocation("KFC", R.drawable.cheese_3));
-        locations.add(new TourLocation("Poppeys", R.drawable.cheese_4));
+        locations.add(new TourLocation(getString(R.string.viet_thai), R.drawable.cheese_1));
+        locations.add(new TourLocation(getString(R.string.mcdonalds), R.drawable.cheese_2));
+        locations.add(new TourLocation(getString(R.string.kfc), R.drawable.cheese_3));
+        locations.add(new TourLocation(getString(R.string.poppeys), R.drawable.cheese_4));
 
         TourLocationAdapter adapter = new TourLocationAdapter(getActivity(), locations);
 
@@ -44,8 +44,8 @@ public class ResturantFragmet extends Fragment {
                 TourLocation loc = locations.get(position);
 
                 Intent ResturantIntent = new Intent(getActivity(), TourDetailActivity.class);
-                ResturantIntent.putExtra("TourLocationName", loc.getName());
-                ResturantIntent.putExtra("TourLocationImage", loc.getThumbnailResourceID());
+                ResturantIntent.putExtra(getString(R.string.TourLocationName), loc.getName());
+                ResturantIntent.putExtra(getString(R.string.TourLocationImage), loc.getThumbnailResourceID());
                 startActivity(ResturantIntent);
 
             }

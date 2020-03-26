@@ -22,10 +22,10 @@ public class ParkFragment extends Fragment {
 
         //regina parks exhibition
         final ArrayList<TourLocation> locations = new ArrayList<TourLocation>();
-        locations.add(new TourLocation("Norseman Park", R.drawable.cheese_3));
-        locations.add(new TourLocation("Kiwanis Waterfall Park", R.drawable.cheese_5));
-        locations.add(new TourLocation("Victoria Park, Regina", R.drawable.cheese_1));
-        locations.add(new TourLocation("Wascana Centre", R.drawable.cheese_4));
+        locations.add(new TourLocation(getString(R.string.norseman_park), R.drawable.cheese_3));
+        locations.add(new TourLocation(getString(R.string.kiwanis_waterfall), R.drawable.cheese_5));
+        locations.add(new TourLocation(getString(R.string.victoria_park), R.drawable.cheese_1));
+        locations.add(new TourLocation(getString(R.string.wascana_centre), R.drawable.cheese_4));
 
         TourLocationAdapter adapter = new TourLocationAdapter(getActivity(), locations);
 
@@ -41,10 +41,10 @@ public class ParkFragment extends Fragment {
 
                 TourLocation loc = locations.get(position);
 
-                Intent ResturantIntent = new Intent(getActivity(), TourDetailActivity.class);
-                ResturantIntent.putExtra("TourLocationName", loc.getName());
-                ResturantIntent.putExtra("TourLocationImage", loc.getThumbnailResourceID());
-                startActivity(ResturantIntent);
+                Intent ParkIntent = new Intent(getActivity(), TourDetailActivity.class);
+                ParkIntent.putExtra(getString(R.string.TourLocationName), loc.getName());
+                ParkIntent.putExtra(getString(R.string.TourLocationImage), loc.getThumbnailResourceID());
+                startActivity(ParkIntent);
 
             }
         });
