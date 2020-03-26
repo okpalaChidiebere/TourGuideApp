@@ -39,22 +39,9 @@ public class TourLocationAdapter extends ArrayAdapter <TourLocation> {
         TextView nameTextView = (TextView) listItemViewRow.findViewById(R.id.location);
         nameTextView.setText(currentWord.getName());
 
-        //CircleImageView imageView = (CircleImageView) listItemViewRow.findViewById(R.id.thumbnail);
         ImageView imageView = (ImageView) listItemViewRow.findViewById(R.id.thumbnail);
          imageView.setImageResource(currentWord.getThumbnailResourceID());
 
-        /*listItemViewRow.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-               // AddressList al= objects.get(position);
-                Intent intent = new Intent(getContext(), TourDetailActivity.class);
-                intent.putExtra("TourLocationName", currentWord.getName());
-                intent.putExtra("TourLocationImage", currentWord.getThumbnailResourceID());
-
-                getContext().startActivity(intent);
-            }
-        });*/
 
         return listItemViewRow;
     }

@@ -31,9 +31,6 @@ public class ResturantFragmet extends Fragment {
 
         TourLocationAdapter adapter = new TourLocationAdapter(getActivity(), locations);
 
-        /*ListView listView = (ListView) rootView.findViewById(R.id.list);
-        listView.setAdapter(adapter);*/
-
         GridView gridView = (GridView) rootView.findViewById(R.id.list);
         gridView.setAdapter(adapter);
 

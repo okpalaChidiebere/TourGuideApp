@@ -38,8 +38,7 @@ public class TourDetailActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
-
-        //setActionBar(toolbar);
+        
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.favourite);
@@ -51,7 +50,6 @@ public class TourDetailActivity extends AppCompatActivity {
             }
         });
 
-        //Intent intent = getIntent();
         final String tourName = getIntent().getStringExtra(getString(R.string.TourLocationName));
 
         /*CollapsingToolbarLayout collapsingToolbar = findViewById(R.id.collapsing_toolbar);
@@ -60,8 +58,6 @@ public class TourDetailActivity extends AppCompatActivity {
         TextView textView = (TextView) findViewById(R.id.tourLoc);
         textView.setText(tourName);
 
-        /*final Toolbar toolbar = findViewById(R.id.toolbar);
-       setSupportActionBar(toolbar);*/
 
         getSupportActionBar().setDisplayShowTitleEnabled(false); //removes the title of your action bar
 

@@ -28,8 +28,7 @@ public class MuseumFragment extends Fragment {
         locations.add(new TourLocation(getString(R.string.plains_museums), R.drawable.cheese_2));
 
         TourLocationAdapter adapter = new TourLocationAdapter(getActivity(), locations);
-        /*ListView listView = (ListView) rootView.findViewById(R.id.list);
-        listView.setAdapter(adapter);*/
+
         GridView gridView = (GridView) rootView.findViewById(R.id.list);
         gridView.setAdapter(adapter);
 
