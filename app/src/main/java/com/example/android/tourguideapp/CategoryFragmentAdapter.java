@@ -21,14 +21,16 @@ public class CategoryFragmentAdapter extends FragmentPagerAdapter {
             return new ResturantFragmet();
         } else if (position == 1){
             return new MuseumFragment();
-        } else {
+        } else if(position == 2){
             return new ParkFragment();
+        } else{
+            return new SportsFragment();
         }
     }
 
     @Override
     public int getCount() {
-        return 3;
+        return 4;
     }
 
     @Override
@@ -38,8 +40,10 @@ public class CategoryFragmentAdapter extends FragmentPagerAdapter {
             //return null;
         } else if (position == 1) {
             return mContext.getString(R.string.museum_category);
-        } else {
+        } else if (position == 2){
             return mContext.getString(R.string.park_category);
+        }else {
+            return mContext.getString(R.string.sports_category);
         }
     }
 
